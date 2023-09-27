@@ -6,9 +6,9 @@ pipeline {
     }
 
     stages {
-        stage('Hello') {
+        stage('build') {
             steps {
-                git branch: 'main', url: 'https://github.com/ayongpeterking/tweet-trend-new.git'
+                sh 'mvn clean deploy'
             }
         }
     }
